@@ -1,0 +1,157 @@
+body {
+  font-family: sans-serif;
+}
+
+#content.options {
+  width: 100%;
+}
+
+#content.popup {
+  width: 300px;
+}
+
+#header {
+  margin-bottom: 2em;
+}
+
+.header-text {
+  font-size: 0.9em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+.donate-text {
+  font-size: 0.7em;
+}
+
+.small-icon {
+  width: 16px;
+  height: 16px;
+  vertical-align: bottom;
+}
+
+h2 {
+  margin-bottom: 0.1em;
+}
+
+a {
+  color: #339933;
+  text-decoration: none;
+}
+
+.small {
+  font-size: 0.75em;
+  text-align: left;
+}
+
+.sort-label {
+  position: relative;
+}
+
+.sort-descending:after {
+  display: inline;
+  position: absolute;
+  top: 6px;
+  content: '';
+  width: 21px;
+  height: 4px;
+  background: transparent url(../images/sort_descending.png);
+}
+
+.sort-ascending:after {
+  display: inline;
+  position: absolute;
+  top: 6px;
+  content: '';
+  width: 21px;
+  height: 4px;
+  background: transparent url(../images/sort_ascending.png);
+}
+
+#messages {
+  font-weight: bold;
+  width: 20em;
+  visibility: hidden;
+  margin-bottom: 0.5em;
+}
+
+.error {
+  color: #ff5050;
+}
+
+.success {
+  color: #006600;
+}
+
+#no-addresses {
+  font-size: 0.8em;
+}
+
+#vertcoin-addresses {
+  font-size: 0.8em;
+  border-collapse: collapse;
+}
+
+#vertcoin-addresses {
+  margin-bottom: 0.5em;
+}
+
+#vertcoin-addresses td, #vertcoin-addresses th {
+  border: 1px solid #ccc;
+  padding: 0.5em;
+}
+
+#vertcoin-addresses th {
+  background-color: #eee;
+}
+
+img.addr {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  padding-right: 5px;
+}
+
+#address-template {
+  display: none;
+}
+
+#address, a.address {
+  font-family: monospace;
+  font-size: 1.3em;
+}
+
+#address {
+  margin-left: -2px;
+  padding: 0px;
+}
+
+.no-label {
+  color: #ccc;
+}
+
+.total {
+  text-align: left;
+}
+
+.balance {
+  text-align: right;
+}
+
+.contributions {
+  font-family: monospace;
+  font-size: 0.9em;
+}
+
+.contributions table {
+  border-collapse: collapse;
+}
+
+.contributions td {
+  border: 1px solid #ccc;
+  padding: 0.25em;
+}
+
+.contributions td:first-child {
+  text-align: right;
+}

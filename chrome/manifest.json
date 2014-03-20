@@ -1,0 +1,36 @@
+{
+  "manifest_version": 2,
+
+  "name": "VertBalance",
+  "description": "View and get notifications for your Vertcoin address balances.",
+  "version": "0.1",
+
+  "permissions": [
+    "alarms",
+    "management",
+    "notifications",
+    "tabs",
+    "http://explorer.vertcoin.org/*"
+  ],
+
+  "background": {
+    "persistent": false,
+    "scripts": [
+      "lib/sprintf.min.js",
+      "lib/jquery-2.1.0.min.js",
+      "src/vertbalance.js",
+      "src/background.js"
+    ]
+  },
+
+  "browser_action": {
+    "default_icon": "images/icon.png",
+    "default_popup": "popup.html"
+  },
+
+  "options_page": "options.html",
+
+  "web_accessible_resources": [
+    "images/icon.png"
+  ]
+}

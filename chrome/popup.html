@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <script type="text/javascript" src="lib/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="lib/sprintf.min.js"></script>
+    <script type="text/javascript" src="src/vertbalance.js"></script>
+    <script type="text/javascript" src="src/popup.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/style.css"></link>
+  </head>
+  <body>
+    <div id="content" class="popup">
+      <center>
+        <div class="header-text">
+          <img class="small-icon" src="images/icon.png">
+          VertBalance v<span id="vertbalance-version"></span>
+        </div>
+      </center>
+
+      <div id="no-addresses">
+        No Vertcoin addresses added, maybe you should visit the <a href="options.html">Options</a>?
+      </div>
+
+      <table id="vertcoin-addresses" width="100%">
+        <tr id="address-headers">
+            <th><span data-col="label" class="sort-label">Label</span></th>
+            <th><span data-col="address" class="sort-label">Address</span></th>
+            <th><span data-col="balance" class="sort-label">Balance</span></th>
+        </tr>
+        <tr id="address-template">
+          <td class="address-label" width="33%"></td>
+          <td width="33%"><a class="address small-text"></a></td>
+          <td class="balance" width="33%"></td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

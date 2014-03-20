@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <script type="text/javascript" src="lib/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="lib/sprintf.min.js"></script>
+    <script type="text/javascript" src="lib/sha256.js"></script>
+    <script type="text/javascript" src="lib/BigInt.js"></script>
+
+    <script type="text/javascript" src="src/vertbalance.js"></script>
+    <script type="text/javascript" src="src/validator.js"></script>
+    <script type="text/javascript" src="src/options.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/style.css"></link>
+  </head>
+  <body>
+    <center>
+      <div id="content" class="options">
+        <div id="header">
+          <img src="images/icon.png">
+          <h2>VertBalance v<span id="vertbalance-version"></span></h2>
+        </div>
+
+        <button id="update-balance" disabled="disabled">Update Balances</button><br/>
+
+        <h3>Vertcoin Addresses</h3>
+
+        <table id="vertcoin-addresses" border="1">
+          <tr><th>Address</th><th>Label</th><th>Notification</th><th>Action</th></tr>
+          <tr id="address-template">
+            <td>
+              <img src="images/icon.png" class="addr"/>
+              <a class="address"></a>
+            </td>
+            <td>
+              <input class="address-label" type="text" size="16" placeholder="No Label"/>
+            </td>
+            <td>
+              <input class="address-notify" type="checkbox"/>
+              <label>Notify when balance changes by</label>
+              <input class="address-notify-delta" type="text" disabled="disabled" size="6"/>
+              VTC
+            </td>
+            <td>
+              <a href="#" class="remove">Remove</a>
+            </td>
+          </tr>
+          <tr id="new-address">
+            <td>
+              <img src="images/icon.png" class="addr"/>
+              <input type="text" id="address" placeholder="Vertcoin address" size="34">
+            </td>
+            <td>
+              <input class="address-label" type="text" size="16" placeholder="No Label"/>
+            </td>
+            <td>
+              <input class="address-notify" type="checkbox" checked="checked"/>
+              <label>Notify when balance changes by</label>
+              <input class="address-notify-delta" type="text" size="6" value="0.10"/>
+              VTC
+            </td>
+            <td>
+              <button id="add-address" disabled="disabled">Add</button>
+            </td>
+          </tr>
+        </table>
+
+        <div id="messages">Messages</div>
+
+        <span class="contributions">
+          Donations and contributions welcome!<br/>
+          <table>
+            <tr><td>VTC</td><td>Vcy4p6F61uefjVNad2o9vEcp7LNfdGfjVp</td></tr>
+            <tr><td>BTC</td><td>13bcMDXMv6erGWT8T8sJeQDY3fsyXfToPC</td></tr>
+            <tr><td>Github</td><td><a href="http://github.com/marshall/vertbalance">http://github.com/marshall/vertbalance</td></tr>
+          </table>
+        </span>
+      </div>
+    </center>
+  </body>
+</html>
