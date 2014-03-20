@@ -160,9 +160,7 @@ $(function($) {
 
     $('body').on('click', 'a', function(){
         var href = $(this).attr('href');
-        VertBalance.getCurrentTab(function(tab) {
-            chrome.tabs.create({url: href, openerTabId: tab.id});
-        });
+        chrome.tabs.create({url: href});
         return false;
     });
 

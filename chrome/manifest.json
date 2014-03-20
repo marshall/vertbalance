@@ -3,13 +3,12 @@
 
   "name": "VertBalance",
   "description": "View and get notifications for your Vertcoin address balances.",
-  "version": "0.1",
+  "version": "0.2",
 
   "permissions": [
     "alarms",
     "management",
     "notifications",
-    "tabs",
     "http://explorer.vertcoin.org/*"
   ],
 

@@ -27,30 +27,12 @@ var VertBalance = {
     },
 
     checkOptions: function() {
-        if (Object.keys(this.getAddresses()).length != 0) {
+        if (Object.keys(this.getAddresses()).length != 0 || localStorage.installTime) {
             return;
         }
 
-        var urlPattern = 'chrome-extension://' + this._extId + '/options.html';
-        chrome.tabs.query({ url: urlPattern }, function(tabs) {
-            if (tabs.length == 0) {
-                chrome.tabs.create({ url: 'options.html' });
-                return;
-            }
-
-            var tab = tabs[0];
-            if (!tab.active) {
-                chrome.tabs.update(tab.id, { active: true });
-            }
-        });
-    },
-
-    getCurrentTab: function(callback) {
-        chrome.tabs.query({ currentWindow: true, active: true }, function(tabs) {
-            if (callback) {
-                callback(tabs[0]);
-            }
-        });
+        localStorage.installTime = String(Date.now());
+        chrome.tabs.create({ url: 'options.html' });
     },
 
     updateData: function(updater) {
