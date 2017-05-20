@@ -24,7 +24,7 @@ $(function($) {
         container.attr('id', addr);
 
         container.find('.address').text(addr).
-            attr('href', 'http://explorer.vertcoin.org/address/' + addr);
+            attr('href', 'http://explorer.vtconline.org/address/' + addr);
 
         var addrLabel = container.find('.address-label');
         var notifyCheck = container.find('.address-notify');
