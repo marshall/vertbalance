@@ -107,11 +107,17 @@ var VertBalance = {
         addresses.forEach(function(address) {
             //http://explorer.vertcoin.org/chain/Vertcoin/q/addressbalance/ADDRESS
             var request = new XMLHttpRequest();
-            request.responseType = 'json';
+            //request.responseType = 'json';
             var self = this;
             request.onload = function() {
                 if (this.response) {
-                    self.updateBalance(address, this.response);
+                    //vtconline responds only with html - need to extract balance
+                    var doc = document.implementation.createHTMLDocument().documentElement;
+                    doc.innerHTML = this.response;
+                    var balancestr = doc.querySelector('table > tbody > tr > td:nth-child(3)').innerText;
+                    var balance = parseFloat(balancestr);
+
+                    self.updateBalance(address, balance);
                 }
                 complete++;
                 if (complete == addresses.length - 1 && callback) {
@@ -121,7 +127,7 @@ var VertBalance = {
             request.onerror = function() {
                 console.log('error!');
             };
-            request.open('GET', 'http://explorer.vertcoin.org/chain/Vertcoin/q/addressbalance/' + address, true);
+            request.open('GET', 'https://explorer.vtconline.org/address/' + address, true);
             request.send();
         }, this);
     },

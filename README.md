@@ -1,7 +1,7 @@
 # VertBalance
 
 VertBalance is a multi-platform balance checker for Vertcoin.
-Since VertBalance uses the [Vertcoin blockchain](http://explorer.vertcoin.org),
+Since VertBalance uses the [Vertcoin blockchain](http://explorer.vtconline.org),
 no credentials are necessary.
 
 VertBalance's key features:
